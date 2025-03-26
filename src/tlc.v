@@ -7,10 +7,11 @@
 
 module tt_um_tlc(            
      output reg [2:0] light_highway,
-    output reg [2:0] light_farm,
-    input C,        // Sensor input
-    input clk,      // Clock
-    input rst_n     // Active-low reset
+     output reg [2:0] light_farm,
+     input C,        // Sensor input
+     input clk,      // Clock
+     input rst_n     // Active-low reset
+     input ena
 );
 
     // State encoding
