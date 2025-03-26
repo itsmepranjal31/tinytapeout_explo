@@ -19,7 +19,7 @@ module tt_um_tlc(
     wire C    = ui_in[0];  // Sensor input
     wire clk  = ui_in[1];  // Clock
     wire rst_n = ui_in[2]; // Active-low reset
-    wire ena  = ui_in[3];  // Enable
+    assign ena  = ui_in[3];  // Enable
 
     reg [2:0] light_highway;
     reg [2:0] light_farm;
