@@ -8,15 +8,15 @@ project:
   clock_hz:     10000000                        # Clock frequency in Hz
 
 # How many tiles your design occupies? A single tile is about 167x108 µm.
-tiles: "1x1"                                    # Valid values: 1x1, 1x2, etc.
+  tiles: "1x1"                                    # Valid values: 1x1, 1x2, etc.
 
 # Your top module name must start with "tt_um_". Make it unique by including your GitHub username.
-top_module: "tt_um_tlc"
+  top_module: "tt_um_tlc"
 
 # List your project's source files here.
 # Source files must be in ./src and you must list each source file separately, one per line.
-source_files:
-  - "tlc.v"
+  source_files:
+    - "tlc.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
