@@ -6,8 +6,13 @@
 `default_nettype none
 
 module tt_um_tlc(   
-    input  [7:0] ui_in,    // TinyTapeout standard 8-bit input
-    output [7:0] uo_out    // TinyTapeout standard 8-bit output
+    input  wire [7:0] ui_in,   // 8-bit input
+    output wire [7:0] uo_out,  // 8-bit output
+    input  wire [7:0] uio_in,  // 8-bit bidirectional (for advanced usage)
+    output wire [7:0] uio_out,
+    output wire [7:0] uio_oe,  
+    input  wire clk,           // Clock signal
+    input  wire rst_n          // Active-low reset
 );
 
     // Mapping TinyTapeout inputs to your signals
