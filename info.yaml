@@ -42,7 +42,6 @@ pinout:
   uo[7]: ""
 
 # Bidirectional pins
-uio:
   uio[0]: ""    # Pin index [0]
   uio[1]: ""    # Pin index [1]
   uio[2]: ""    # Pin index [2]
