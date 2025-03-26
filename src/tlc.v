@@ -6,13 +6,18 @@
 `default_nettype none
 
 module tt_um_tlc(   
-     output reg [2:0] light_highway,
-     output reg [2:0] light_farm,
-     input C,        // Sensor input
-     input clk,      // Clock
-     input rst_n,     // Active-low reset
-     input ena
+    input  [7:0] ui_in,    // TinyTapeout standard 8-bit input
+    output [7:0] uo_out    // TinyTapeout standard 8-bit output
 );
+
+    // Mapping TinyTapeout inputs to your signals
+    wire C    = ui_in[0];  // Sensor input
+    wire clk  = ui_in[1];  // Clock
+    wire rst_n = ui_in[2]; // Active-low reset
+    wire ena  = ui_in[3];  // Enable
+
+    reg [2:0] light_highway;
+    reg [2:0] light_farm;
 
     // State encoding
     parameter HGRE_FRED = 2'b00,  // Highway Green/Farm Red
