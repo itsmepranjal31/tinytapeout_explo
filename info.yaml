@@ -26,7 +26,7 @@ pinout:
   ui[1]: "rst_n"
   ui[2]: "C"
   ui[3]: "ena"
-  ui[4]: "ui_in"
+  ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
@@ -34,7 +34,7 @@ pinout:
   # Outputs
   uo[0]: "light_highway"
   uo[1]: "light_farm"
-  uo[2]: "uo_out"
+  uo[2]: ""
   uo[3]: ""
   uo[4]: ""
   uo[5]: ""
@@ -42,9 +42,9 @@ pinout:
   uo[7]: ""
 
 # Bidirectional pins
-  uio[0]: "uio_in"    # Pin index [0]
-  uio[1]: "uio_out"    # Pin index [1]
-  uio[2]: "uio_oe"    # Pin index [2]
+  uio[0]: ""    # Pin index [0]
+  uio[1]: ""    # Pin index [1]
+  uio[2]: ""    # Pin index [2]
   uio[3]: ""    # Pin index [3]
   uio[4]: ""    # Pin index [4]
   uio[5]: ""    # Pin index [5]
