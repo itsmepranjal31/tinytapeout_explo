@@ -1,11 +1,11 @@
 # Tiny Tapeout project information
 project: 
-  title:        "Traffic light Controller"      # Project title
-  author:       "Explo Team Under Shivam Sir"   # Your name
-  discord:      ""                              # Your Discord username (optional)
-  description:  "A traffic light controller designed as a finite state machine which takes input using the sensor on when to start operation" # Description
-  language:     "Verilog"                       # Language used (e.g., Verilog, SystemVerilog)
-  clock_hz:     10000000                        # Clock frequency in Hz
+title:        "Traffic light Controller"      # Project title
+author:       "Explo Team Under Shivam Sir"   # Your name
+discord:      ""                              # Your Discord username (optional)
+description:  "A traffic light controller designed as a finite state machine which takes input using the sensor on when to start operation" # Description
+language:     "Verilog"                       # Language used (e.g., Verilog, SystemVerilog)
+clock_hz:     10000000                        # Clock frequency in Hz
 
 # How many tiles your design occupies? A single tile is about 167x108 µm.
 tiles: "1x1"                                    # Valid values: 1x1, 1x2, etc.
@@ -43,14 +43,14 @@ pinout:
 
 # Bidirectional pins
 uio:
-    - ""    # Pin index [0]
-    - ""    # Pin index [1]
-    - ""    # Pin index [2]
-    - ""    # Pin index [3]
-    - ""    # Pin index [4]
-    - ""    # Pin index [5]
-    - ""    # Pin index [6]
-    - ""    # Pin index [7]
+  uio[0]: ""    # Pin index [0]
+  uio[1]: ""    # Pin index [1]
+  uio[2]: ""    # Pin index [2]
+  uio[3]: ""    # Pin index [3]
+  uio[4]: ""    # Pin index [4]
+  uio[5]: ""    # Pin index [5]
+  uio[6]: ""    # Pin index [6]
+  uio[7]: ""    # Pin index [7]
 
 # Do not change!
 yaml_version: 6
