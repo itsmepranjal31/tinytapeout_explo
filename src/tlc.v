@@ -5,7 +5,12 @@
 
 `default_nettype none
 
-module tt_um_tlc(            
+module tt_um_tlc(   
+     input  wire [7:0] ui_in,    // Dedicated inputs
+     output wire [7:0] uo_out,   // Dedicated outputs
+     input  wire [7:0] uio_in,   // Bidirectional inputs
+     output wire [7:0] uio_out,  // Bidirectional outputs
+     output wire [7:0] uio_oe,   // Bidirectional output enables
      output reg [2:0] light_highway,
      output reg [2:0] light_farm,
      input C,        // Sensor input
