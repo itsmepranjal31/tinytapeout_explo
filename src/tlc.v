@@ -1,28 +1,10 @@
-/*
- * Copyright (c) 2024 Your Name
- * SPDX-License-Identifier: Apache-2.0
- */
-
-`default_nettype none
-
-module tt_um_tlc(   
-    input  wire [7:0] ui_in,   // 8-bit input
-    output wire [7:0] uo_out,  // 8-bit output
-    input  wire [7:0] uio_in,  // 8-bit bidirectional (for advanced usage)
-    output wire [7:0] uio_out,
-    output wire [7:0] uio_oe,  
-    input  wire clk,           // Clock signal
-    input  wire rst_n          // Active-low reset
+module traffic_light(
+    output reg [2:0] light_highway,
+    output reg [2:0] light_farm,
+    input C,        // Sensor input
+    input clk,      // Clock
+    input rst_n     // Active-low reset
 );
-
-    // Mapping TinyTapeout inputs to your signals
-    wire C    = ui_in[0];  // Sensor input
-    wire clk  = ui_in[1];  // Clock
-    wire rst_n = ui_in[2]; // Active-low reset
-    assign ena  = ui_in[3];  // Enable
-
-    reg [2:0] light_highway;
-    reg [2:0] light_farm;
 
     // State encoding
     parameter HGRE_FRED = 2'b00,  // Highway Green/Farm Red
@@ -39,7 +21,7 @@ module tt_um_tlc(
         if (!rst_n) begin
             state <= HGRE_FRED;
             counter <= 0;
-        end else if (ena) begin
+        end else begin
             state <= next_state;
           counter <= (counter >= 4'd13) ? 0 : counter + 1;
         end
@@ -77,4 +59,5 @@ module tt_um_tlc(
         endcase
     end
 
+   
 endmodule
